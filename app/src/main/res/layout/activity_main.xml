@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainback"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/textViewCityName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="City Name"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewCityName"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/searchCityName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="4.5"
+                android:background="#990C2C3E"
+                android:hint="Enter City Name"
+                android:padding="5dp"
+                android:textColorHint="@color/black"
+                app:hintTextColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextCityName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#CEEFEC"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/searchIcon"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_search"
+                app:tint="@color/black" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewTemp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayout"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="23"
+            android:textColor="@color/teal_700"
+            android:textSize="70dp" />
+
+
+
+        <TextView
+            android:id="@+id/tempCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewTemp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Condition"
+            android:textSize="22sp"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/feelsLike"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/tempCondition"
+            android:layout_marginStart="125dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Feels like : "
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tempFeels"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/tempCondition"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/feelsLike"
+            android:gravity="center"
+            android:text="25"
+            android:textColor="@color/teal_700"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/tempMin"
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/feelsLike"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="24"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textName1"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/tempMin"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="Min Temp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tempMax"
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/feelsLike"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="false"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="216dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="30"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textName2"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/tempMin"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="false"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="216dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="Max Temp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/humidity"
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/feelsLike"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="false"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="110dp"
+            android:layout_marginRight="113dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="50"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textName3"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/tempMin"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="false"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="110dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="Humidity"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/windSpeed"
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/feelsLike"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="false"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="4.63"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textName4"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/tempMin"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="false"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="Wind Speed"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
