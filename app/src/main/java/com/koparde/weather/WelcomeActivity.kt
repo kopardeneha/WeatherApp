@@ -137,4 +137,3 @@ private fun FusedLocationProviderClient.requestLocationUpdates(locationCallback:
 }
 
 
-//7eb0b2d87cba2247e32459ad1bd31934
